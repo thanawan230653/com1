@@ -1,0 +1,10 @@
+$url = "https://raw.githubusercontent.com/thanawan230653/com1/refs/heads/main/player.exe"
+$output = "$env:TEMP\player.exe"
+
+Write-Host "Downloading player.exe..."
+Invoke-WebRequest -Uri $url -OutFile $output
+
+Write-Host "Download complete."
+Read-Host "Press ENTER to run"
+
+Start-Process $output
